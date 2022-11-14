@@ -1,13 +1,11 @@
 public class Main {
     public static void main(String[] args){
 
-        String print = "Print Me!";
+        StringLoops test1 = new StringLoops();
 
-        for(int i = 0; i <= print.length(); i++)
-        {
-            System.out.println(print.substring(i, i + 1));
-        }
+        System.out.println(test1.countCharacters("A", "apple"));
 
+        System.out.println(test1.reverseString("Hello World"));
 
 
 

@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class StringLoops
 {
     // default constructor; no instance variables
@@ -18,6 +20,18 @@ public class StringLoops
       */
     public int countCharacters(String character, String searchString) {
         /* to be implemented */
+        character = character.toLowerCase();
+        searchString = searchString.toLowerCase();
+
+        int counter = 0;
+
+        for (int i = 0; i < searchString.length(); i++){
+            if (Character.toString(searchString.charAt(i)).equals(character)){
+                counter+= 1;
+            }
+        }
+
+        return counter;
     }
 
     /* Returns the original string reversed
@@ -28,6 +42,13 @@ public class StringLoops
     */
     public String reverseString(String origString) {
         /* to be implemented */
+        String reversed = "";
+
+        for (int i = origString.length() - 1; i >= 0 ;i--){
+            reversed += origString.charAt(i);
+        }
+        return reversed;
+
     }
 }
-Hint
+
